@@ -12,6 +12,20 @@ A live version of this dashboard is deployed and can be accessed via the link ab
 
 ---
 
+## Development Approach, Technologies, and Challenges
+
+For my Stock Market Dashboard project, I focused on building a clean, end-to-end solution that separates backend logic from frontend presentation. I designed the backend using FastAPI, which exposes endpoints for company data and historical stock prices. The API also calculates key stats—like last close, 52-week high/low, 30-day average volume, and RSI(14)—and includes a simple linear regression model for next-day price prediction.
+
+On the frontend, I used vanilla HTML, CSS, and JavaScript with Chart.js to create a responsive, interactive interface. Users can search/filter companies and see dynamic charts with stats, making the experience smooth and informative.
+
+The project uses Python, pandas, yfinance, and scikit-learn on the backend, while the frontend is lightweight and fast. I containerized everything with Docker for easy deployment on platforms like Render or Railway.
+
+Key challenges I faced included handling different stock symbol formats between US and NSE markets, managing missing or irregular data from yfinance, and computing technical indicators reliably without errors. On the frontend, designing a compact, readable layout that works well on desktop and mobile required careful planning.
+
+Through this project, I learned how to integrate real-world data APIs with Python, compute financial analytics efficiently, and build a user-friendly visualization from scratch. I also gained experience in full-stack deployment using Docker and cloud platforms, as well as debugging asynchronous data flows and ensuring consistent frontend-backend communication. This project strengthened my skills in data-driven UI design, API development, and end-to-end system integration, which I can carry forward into future full-stack and data-focused projects.
+
+---
+
 ## Features
 
 -   Scrollable company list with search/filter.
@@ -95,3 +109,11 @@ This is a minimal end-to-end dashboard demonstrating a clean separation of conce
 -   **Frontend** handles the UX: filtering, responsive layout, and the interactive chart.
 
 The application is designed to handle stock symbol variations, API gaps, and NaN values gracefully.
+
+
+
+
+
+
+
+
