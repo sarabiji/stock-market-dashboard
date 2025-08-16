@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stock Market Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">📈 Stocks</div>
+      <input id="search" class="search" placeholder="Search tickers... (e.g., AAPL)"/>
+      <ul id="companyList" class="company-list"></ul>
+      <div class="footer">Tip: Click a company to load data</div>
+    </aside>
+    <main class="main">
+      <header class="toolbar">
+        <div>
+          <select id="period">
+            <option value="1mo">1M</option>
+            <option value="3mo">3M</option>
+            <option value="6mo">6M</option>
+            <option value="1y" selected>1Y</option>
+            <option value="2y">2Y</option>
+            <option value="5y">5Y</option>
+            <option value="max">MAX</option>
+          </select>
+          <select id="interval">
+            <option value="1d" selected>1D</option>
+            <option value="1wk">1W</option>
+            <option value="1mo">1M</option>
+          </select>
+        </div>
+        <div id="selectedName" class="title">Select a company</div>
+      </header>
+      <section class="cards">
+        <div class="card"><div class="label">Last Close</div><div id="stat_last" class="value">-</div></div>
+        <div class="card"><div class="label">52W High</div><div id="stat_high" class="value">-</div></div>
+        <div class="card"><div class="label">52W Low</div><div id="stat_low" class="value">-</div></div>
+        <div class="card"><div class="label">Avg Vol (30d)</div><div id="stat_vol" class="value">-</div></div>
+        <div class="card"><div class="label">RSI(14)</div><div id="stat_rsi" class="value">-</div></div>
+        <div class="card"><div class="label">Predicted Next Close</div><div id="stat_pred" class="value">-</div></div>
+      </section>
+      <section class="chart-wrap">
+        <canvas id="chart"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
