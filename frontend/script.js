@@ -100,16 +100,18 @@ function drawChart(rows){
       }
     }
   });
+
 }
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("search").addEventListener("input", (e)=> renderCompanyList(e.target.value));
+  document.getElementById("period").addEventListener("change", ()=> state.selected && selectCompany(state.selected));
+  document.getElementById("interval").addEventListener("change", ()=> state.selected && selectCompany(state.selected));
 
-document.getElementById("search").addEventListener("input", (e)=> renderCompanyList(e.target.value));
-document.getElementById("period").addEventListener("change", ()=> state.selected && selectCompany(state.selected));
-document.getElementById("interval").addEventListener("change", ()=> state.selected && selectCompany(state.selected));
-
-// Init
-loadCompanies().then(()=> {
-  // Auto-select first
-  if(state.companies.length){
-    selectCompany(state.companies[0]);
-  }
+  // Init
+  loadCompanies().then(()=> {
+    if(state.companies.length){
+      selectCompany(state.companies[0]);
+    }
+  });
 });
+
