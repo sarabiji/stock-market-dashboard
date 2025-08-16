@@ -23,7 +23,8 @@ app.add_middleware(
 # Serve frontend if available
 FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "../frontend")
 if os.path.isdir(FRONTEND_DIR):
-    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="frontend")
+
 
 # ---- Models ----
 class Company(BaseModel):
