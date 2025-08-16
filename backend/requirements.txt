@@ -1,6 +1,7 @@
 fastapi
-uvicorn
-yfinance
-scikit-learn
+uvicorn[standard]
 pandas
 numpy
+scikit-learn
+yfinance
+python-multipart
