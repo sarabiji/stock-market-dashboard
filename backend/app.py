@@ -56,6 +56,7 @@ class HistoryResponse(BaseModel):
 
 # ---- Data ----
 COMPANIES = [
+COMPANIES = [
     {"name": "Apple", "ticker": "AAPL"},
     {"name": "Microsoft", "ticker": "MSFT"},
     {"name": "Alphabet (Google)", "ticker": "GOOGL"},
@@ -68,7 +69,22 @@ COMPANIES = [
     {"name": "HDFC Bank", "ticker": "HDFCBANK.NS"},
     {"name": "Infosys", "ticker": "INFY.NS"},
     {"name": "ICICI Bank", "ticker": "ICICIBANK.NS"},
+    {"name": "Wipro", "ticker": "WIPRO.NS"},
+    {"name": "Bajaj Finance", "ticker": "BAJFINANCE.NS"},
+    {"name": "Sony", "ticker": "SONY"},
+    {"name": "Netflix", "ticker": "NFLX"},
+    {"name": "Adani Enterprises", "ticker": "ADANIENT.NS"},
+    {"name": "Maruti Suzuki", "ticker": "MARUTI.NS"},
+    {"name": "State Bank of India", "ticker": "SBIN.NS"},
+    {"name": "Larsen & Toubro", "ticker": "LT.NS"},
+    {"name": "HCL Technologies", "ticker": "HCLTECH.NS"},
+    {"name": "ICICI Lombard", "ticker": "ICICIGI.NS"},
+    {"name": "Facebook", "ticker": "FB"},
+    {"name": "Alphabet (GOOG)", "ticker": "GOOG"},
+    {"name": "PayPal", "ticker": "PYPL"},
+    {"name": "Adobe", "ticker": "ADBE"}
 ]
+
 
 
 @app.get("/api/companies", response_model=List[Company])
