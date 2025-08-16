@@ -1,5 +1,12 @@
 const API_BASE = ""; 
 
+const sidebar = document.querySelector('.company-list');
+
+sidebar.addEventListener('scroll', () => {
+  sidebar.style.setProperty('--top-shadow-opacity', sidebar.scrollTop > 0 ? 1 : 0);
+  sidebar.style.setProperty('--bottom-shadow-opacity', sidebar.scrollHeight - sidebar.scrollTop > sidebar.clientHeight + 1 ? 1 : 0);
+});
+
 const state = {
   companies: [],
   selected: null,
