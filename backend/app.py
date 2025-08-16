@@ -119,8 +119,8 @@ def get_history(ticker: str, period: str = "1y", interval: str = "1d", predict: 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# --- Render-ready startup ---
+
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 8000))  # use Render-assigned port
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("backend.app:app", host="0.0.0.0", port=port, reload=True)
