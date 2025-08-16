@@ -70,6 +70,7 @@ COMPANIES = [
     {"name": "ICICI Bank", "ticker": "ICICIBANK.NS"},
 ]
 
+
 @app.get("/api/companies", response_model=List[Company])
 def get_companies():
     return COMPANIES
