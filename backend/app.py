@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 import yfinance as yf
@@ -20,10 +21,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Serve frontend if available
-FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "../frontend")
+
 if os.path.isdir(FRONTEND_DIR):
-    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="frontend")
+    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+
+    @app.get("/")
+    async def serve_index():
+        return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
+
 
 
 # ---- Models ----
