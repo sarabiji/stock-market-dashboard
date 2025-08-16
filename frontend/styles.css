@@ -20,7 +20,8 @@ body{
 }
 .logo{font-weight:700;font-size:18px}
 .search{padding:10px;border-radius:8px;border:1px solid #374151;background:#0b1221;color:var(--text)}
-.company-list{list-style:none;margin:0;padding:0;overflow:auto;flex:1}
+
+.company-list {list-style: none;margin: 0;padding: 0;overflow-y: auto;  max-height: 500px;flex: 1;}
 .company-list li{padding:10px;border-radius:8px;cursor:pointer;border:1px solid transparent}
 .company-list li:hover{background:#0b1221;border-color:#1f2937}
 .company-list li.active{background:#0b1221;border-color:var(--accent)}
