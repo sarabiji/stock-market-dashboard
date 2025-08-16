@@ -54,8 +54,7 @@ class HistoryResponse(BaseModel):
     stats: Dict[str, Any]
     prediction: Optional[Dict[str, Any]] = None
 
-# ---- Data ----
-COMPANIES = [
+
 COMPANIES = [
     {"name": "Apple", "ticker": "AAPL"},
     {"name": "Microsoft", "ticker": "MSFT"},
@@ -71,19 +70,19 @@ COMPANIES = [
     {"name": "ICICI Bank", "ticker": "ICICIBANK.NS"},
     {"name": "Wipro", "ticker": "WIPRO.NS"},
     {"name": "Bajaj Finance", "ticker": "BAJFINANCE.NS"},
-    {"name": "Sony", "ticker": "SONY"},
-    {"name": "Netflix", "ticker": "NFLX"},
     {"name": "Adani Enterprises", "ticker": "ADANIENT.NS"},
     {"name": "Maruti Suzuki", "ticker": "MARUTI.NS"},
     {"name": "State Bank of India", "ticker": "SBIN.NS"},
     {"name": "Larsen & Toubro", "ticker": "LT.NS"},
     {"name": "HCL Technologies", "ticker": "HCLTECH.NS"},
     {"name": "ICICI Lombard", "ticker": "ICICIGI.NS"},
-    {"name": "Facebook", "ticker": "FB"},
-    {"name": "Alphabet (GOOG)", "ticker": "GOOG"},
+    {"name": "Sony", "ticker": "SONY"},
+    {"name": "Netflix", "ticker": "NFLX"},
     {"name": "PayPal", "ticker": "PYPL"},
-    {"name": "Adobe", "ticker": "ADBE"}
+    {"name": "Adobe", "ticker": "ADBE"},
+    {"name": "Intel", "ticker": "INTC"}
 ]
+
 
 
 
